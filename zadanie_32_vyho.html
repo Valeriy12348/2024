@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <div class="Spodnie-info">
+    <script type="text/javascript">
+      function Spodnie(marka, site, ocena, kraj) {
+        this.marka = marka;
+        this.site = site;
+        this.ocena = ocena;
+        this.kraj = kraj;
+      }
+
+      Spodnie.prototype.productionYear = 2023;
+      Spodnie.prototype.getInfo = function () {
+        alert(
+          'Marka: ' + this.marka
+          + '\nWeb-site: ' + this.site
+          + '\nOcena: ' + this.ocena
+          + '\nKraj: ' + this.kraj
+        );
+      };
+
+      const firstSpodnie = new Spodnie(
+        'old relans',
+        'old_relans.com',
+        4.7,
+        'Szwecaria',
+      );
+
+      const secondSpodnie = new Spodnie(
+        'rike',
+        'rike.com',
+        5,
+        'Ukraina',
+      );
+
+      const thirdSpodnie = new Spodnie(
+        'Abbibos',
+        'abbibos.com',
+        4.1,
+        'USA',
+      );
+
+      firstSpodnie.getInfo();
+      secondSpodnie.getInfo();
+      thirdSpodnie.getInfo();
+
+      firstSpodnie.pokaz_vyho = function () {
+        const {marka, broken} = this;
+
+        alert(`Spodnie ${name}`);
+      };
+
+      firstSpodnie.pokaz_vyho();
+    </script>
+  </div>
+</body>
+
+</html>
