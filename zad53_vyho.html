@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:black;font-size:18px;">
+<script language="JavaScript">
+    var a_kow = parseInt(prompt("Podaj wysokość prostokąta (a):", "5"));
+    var b_kow = parseInt(prompt("Podaj szerokość prostokąta (b):", "23"));
+
+    for (var i = 0; i < b_kow; i++) {
+        document.write('*');
+    }
+    document.write('<br>');
+
+    var wiersz_kow = '*';
+    for (var i = 1; i <= (b_kow - 2); i++) {
+        wiersz_kow += '&nbsp&nbsp';
+    }
+    wiersz_kow += '*';
+
+    for (var j = 1; j <= (a_kow - 2); j++) {
+        document.write(wiersz_kow + '<br>');
+    }
+
+    for (var i = 0; i < b_kow; i++) {
+        document.write('*');
+    }
+</script>
+</div>
+</body>
+</html>

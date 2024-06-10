@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:black;font-size:18px;">
+<script language="JavaScript">
+    var l1_t_kow = prompt("Podaj pierwszą liczbę (trzy litery nazwiska):");
+    var l2_t_kow = prompt("Podaj drugą liczbę (trzy litery nazwiska):");
+    var pocz_kow = parseInt(prompt("Podaj wartość początkową wielkości tekstu (trzy litery nazwiska):"));
+    var tekst_kow = prompt("Podaj tekst (trzy litery nazwiska):");
+
+    if (l1_t_kow < 20 || l1_t_kow > 60 || l2_t_kow < 20 || l2_t_kow > 60) {
+        document.write("Liczby l1 lub l2 nie należą do przedziału <20, 60>.");
+    } else {
+        var iloscPowtorzen = Math.abs(l1_t_kow - l2_t_kow);
+        var zwiekszanie = l1_t_kow < l2_t_kow ? true : false;
+
+        for (var i = pocz_kow; (zwiekszanie && i <= 100) || (!zwiekszanie && i >= 0); zwiekszanie ? i += 5 : i -= 5) {
+            document.write("<p style=\"font-size:" + i + "px; color: black;\"><br>" + tekst_kow + "<br></p>");
+            iloscPowtorzen--;
+            if (iloscPowtorzen <= 0) break;
+        }
+    }
+</script>
+</div>
+</body>
+</html>
+

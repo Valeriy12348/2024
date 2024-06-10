@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+</head>
+<body>
+<div style="color:black;font-size:18px;">
+<script language="JavaScript">
+    var licznik = 0;
+
+    for (var i = 28; i <= 28 + 15; i++) {
+        var pierw_2 = Math.sqrt(i).toFixed(2);
+        var pierw_4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+
+
+        document.write("I=" + i + " pierw_2(" + i + ")=" + pierw_2 + " pierw_4(" + i + ")=" + pierw_4 + "<br>");
+
+        licznik++;
+        if (licznik % 3 == 0) {
+            document.write("............................................................<br>");
+           
+        }
+    }
+</script>
+</div>
+</body>
+</html>
