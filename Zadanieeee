@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сложение чисел</title>
+    <style>
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Сложение двух чисел</h1>
+
+    <label for="num1">Введите первое число:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label for="num2">Введите второе число:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="calculateSum()">Посчитай</button>
+
+    <table>
+        <tr>
+            <th>Результат</th>
+        </tr>
+        <tr>
+            <td id="result"></td>
+        </tr>
+    </table>
+
+    <script>
+        function calculateSum() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var sum = num1 + num2;
+            document.getElementById("result").innerText = sum;
+        }
+    </script>
+
+</body>
+</html>
